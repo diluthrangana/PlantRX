@@ -1,92 +1,104 @@
-import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  Image,
-  StatusBar,
-  StyleSheet,
-  Text,
-  Dimensions,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button, Image, StyleSheet, Alert } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
-import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-
-export const { height, width } = Dimensions.get('window');
-
-const options = {
-  mediaType: 'photo',
-  quality: 1,
-  includeBase64: true,
-};
 
 const App = () => {
-  const [result, setResult] = useState('');
+  const [imageUri, setImageUri] = useState(null);
+  const [prediction, setPrediction] = useState(null);
   const [label, setLabel] = useState('');
-  const [image, setImage] = useState('');
+
+  useEffect(() => {
+    (async () => {
+      // Request permission to access the camera roll
+      const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission to access camera roll is required!');
+      }
+    })();
+  }, []);
+
+  const pickImage = async () => {
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setImageUri(result.assets[0].uri);
+    }
+  };
 
   const getPrediction = async (params) => {
-    let bodyFormData = new FormData();
-    bodyFormData.append('file', params);
+    return new Promise((resolve, reject) => {
+      const bodyFormData = new FormData();
+      bodyFormData.append('file', params);
+
+      const url = 'http://127.0.0.1:8000/predict'; // Ensure this URL is correctly set in your .env file
+      axios
+        .post(url, bodyFormData)
+        .then(response => {
+          resolve(response.data);
+        })
+        .catch(error => {
+          setLabel('Failed to predict.');
+          reject('Error: ', error);
+        });
+    });
+  };
+
+  const predictDisease = async () => {
+    if (!imageUri) {
+      Alert.alert('Please select an image first.');
+      return;
+    }
+
+    const fileData = {
+      uri: imageUri,
+      name: 'image.jpg',
+      type: 'image/jpeg',
+    };
+
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict', bodyFormData);
-      return response;
+      const data = await getPrediction(fileData);
+      setPrediction({
+        class: data.class,
+        confidence: (data.confidence * 100).toFixed(2),
+      });
     } catch (error) {
-      console.log('Prediction error:', error);
-      setLabel('Prediction failed.');
+      console.error('Error:', error);
+      Alert.alert('Error predicting disease. Please try again.');
     }
   };
 
-  const handleImagePickerResponse = async (response) => {
-    if (response?.assets?.length > 0) {
-      const file = response.assets[0];
-      const path = file.uri;
-      setImage(path);
-      setLabel('Predicting...');
-      const params = { uri: path, name: file.fileName, type: file.type };
-      const res = await getPrediction(params);
-      if (res?.data?.class) {
-        setLabel(res.data.class);
-        setResult(res.data.confidence);
-      } else {
-        setLabel('Failed to predict');
-      }
+  // New function to test the GET /test endpoint
+  const testGetMethod = async () => {
+    try {
+      const response = await axios.get('http://127.0.0.1:8000/ping');
+      Alert.alert('Success', response.data.message);
+    } catch (error) {
+      console.error('Error testing GET method:', error);
+      Alert.alert('Error testing GET method. Please try again.');
     }
-  };
-
-  const openCamera = () => {
-    launchCamera(options, handleImagePickerResponse);
-  };
-
-  const openLibrary = () => {
-    launchImageLibrary(options, handleImagePickerResponse);
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" />
-      {image ? (
-        <Image source={{ uri: image }} style={styles.image} />
-      ) : (
-        <Text style={styles.instructions}>
-          Select a potato plant leaf image to predict the disease.
-        </Text>
-      )}
-      {label && (
-        <View style={styles.resultContainer}>
-          <Text style={styles.label}>Label: {label}</Text>
-          <Text style={styles.confidence}>Confidence: {parseFloat(result).toFixed(2)}%</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Tomato Disease Prediction</Text>
+      <Button title="Select Image" onPress={pickImage} />
+      {imageUri && <Image source={{ uri: imageUri }} style={styles.image} />}
+      <Button title="Predict Disease" onPress={predictDisease} />
+      <Button title="Test GET Method" onPress={testGetMethod} />
+      {label && <Text style={styles.error}>{label}</Text>}
+      {prediction && (
+        <View style={styles.result}>
+          <Text>Predicted Class: {prediction.class}</Text>
+          <Text>Confidence: {prediction.confidence}%</Text>
         </View>
       )}
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity onPress={openCamera} style={styles.button}>
-          <Text style={styles.buttonText}>Open Camera</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={openLibrary} style={styles.button}>
-          <Text style={styles.buttonText}>Open Gallery</Text>
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -96,42 +108,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  instructions: {
-    fontSize: 18,
-    textAlign: 'center',
+  title: {
     marginBottom: 20,
+    fontSize: 24,
+    fontFamily: 'System', // Using system font
   },
   image: {
-    width: width * 0.1,
-    height: width * 0.1,
-    marginBottom: 20,
-    borderRadius: 10,
-  },
-  resultContainer: {
-    alignItems: 'center',
+    width: 200,
+    height: 200,
     marginVertical: 20,
   },
-  label: {
-    fontSize: 22,
-    fontWeight: 'bold',
-  },
-  confidence: {
-    fontSize: 18,
-    marginTop: 5,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
+  result: {
     marginTop: 20,
+    fontSize: 18,
   },
-  button: {
-    marginHorizontal: 10,
-    backgroundColor: '#007BFF',
-    padding: 15,
-    borderRadius: 10,
-  },
-  buttonText: {
-    color: '#FFF',
-    fontSize: 16,
+  error: {
+    color: 'red',
+    marginTop: 10,
   },
 });
 

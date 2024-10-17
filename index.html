@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato Disease Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #5c6bc0;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #ffffff;
+            width: 250px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="file"]:hover {
+            border-color: #3f51b5;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #5c6bc0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3f51b5;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        .result p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            input[type="file"] {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tomato Disease Prediction</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <button id="predictButton">Predict Disease</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        const predictButton = document.getElementById('predictButton');
+        const imageInput = document.getElementById('imageInput');
+        const resultDiv = document.getElementById('result');
+
+        // Function to upload the image and get prediction
+        predictButton.addEventListener('click', async () => {
+            const file = imageInput.files[0];
+            if (!file) {
+                alert('Please select an image first.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/predict', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                resultDiv.innerHTML = `
+                    <p>Predicted Class: <strong>${data.class}</strong></p>
+                    <p>Confidence: <strong>${(data.confidence * 100).toFixed(2)}%</strong></p>
+                `;
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = '<p style="color: red;">Error predicting disease. Please try again.</p>';
+            }
+        });
+    </script>
+
+</body>
+</html>

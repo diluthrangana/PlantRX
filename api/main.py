@@ -9,13 +9,11 @@ import os
 
 app = FastAPI()
 
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-]
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -48,6 +46,11 @@ CLASS_NAMES = [
 async def ping():
     return {"message": "Hello, I am alive"}
 
+@app.get("/test")
+async def test():
+    """A simple GET method to test server functionality."""
+    return {"status": "Success", "message": "GET request was successful"}
+
 def read_file_as_image(data) -> np.ndarray:
     """Converts uploaded file data to a numpy array and preprocesses it."""
     image = Image.open(BytesIO(data))
@@ -62,6 +65,9 @@ async def predict(file: UploadFile = File(...)):
     # Check if the model was loaded correctly
     if MODEL is None:
         raise HTTPException(status_code=500, detail="Model not loaded. Please check if the model exists.")
+    
+    # Log the file details to verify it's being received correctly
+    print(f"Received file: {file.filename}, Content-Type: {file.content_type}")
     
     # Read the uploaded image file and preprocess it
     try:
