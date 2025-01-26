@@ -1,0 +1,33 @@
+/planting-guide
+├── /public
+│   ├── /images
+│   └── /favicon.ico
+│
+├── /src
+│   ├── /app
+│   │   ├── /auth
+│   │   │   ├── login.js
+│   │   │   ├── signup.js
+│   │   │   └── layout.js
+│   │   ├── /home
+│   │   │   └── page.js
+│   │   ├── /layout.js
+│   │   ├── /page.js
+│   │   └── /error.js
+│   │
+│   ├── /components
+│   │   ├── Navbar.js
+│   │   ├── Layout.js
+│   │   ├── AuthForm.js
+│   │
+│   ├── /models
+│   │   ├── User.js
+│   │
+│   ├── /utils
+│   │   ├── auth.js
+│   │   └── dbConnect.js
+│
+├── .env.local
+├── package.json
+├── next.config.js
+└── README.md
