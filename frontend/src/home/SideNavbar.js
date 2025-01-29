@@ -1,9 +1,9 @@
 import React from "react";
 import { FaHome, FaSeedling, FaVirus, FaSignOutAlt, FaPlus, FaComment, FaCloudRain } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from "react-router-dom"; 
 
 const SideNavbar = () => {
-  const navigate = useNavigate(); // Hook to navigate
+  const navigate = useNavigate(); 
 
   return (
     <div style={styles.container}>
@@ -42,26 +42,26 @@ const SideNavbar = () => {
   );
 };
 
-// Styles for the SideNavbar component
+
 const styles = {
   container: {
-    paddingTop: "60px", // You can adjust this value to move the navbar further down
+    paddingTop: "60px", 
     
   },
 
   sidebar: {
-    width: "20%", // 25% width for the side navbar
-    color: "#000", // Black text color for better contrast
+    width: "20%", 
+    color: "#000", 
     height: "100vh",
-    paddingTop: "20px", // Adjust if needed
+    paddingTop: "20px", 
     paddingLeft:"15px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
-    position: "fixed", // Fixed positioning to the left side
-    top: "60px", // Adjust this to move the sidebar further down
+    position: "fixed", 
+    top: "60px", 
     right: 0,
-    borderLeft: "1px solid #d3d3d3", // Thin light gray vertical line on the left
+    borderLeft: "1px solid #d3d3d3", 
   },
   logo: {
     textAlign: "left",
@@ -69,7 +69,7 @@ const styles = {
     fontSize: "24px",
     fontWeight: "bold",
     marginBottom: "30px",
-    color: "#685752", // Dark text color for
+    color: "#685752", 
   },
   navLinks: {
     display: "flex",
@@ -85,11 +85,11 @@ const styles = {
   icon: {
     fontSize: "20px",
     marginRight: "15px",
-    color: "#997C70", // Dark text color for better contrast
+    color: "#997C70", 
   },
   linkText: {
     fontSize: "15px",
-    color: "685752", // Dark text color for better contrast
+    color: "685752", 
   },
 };
 

@@ -53,7 +53,7 @@ const PlantingPlanDetails = () => {
     }
   };
 
-  // Skip the steps that are lower than the current level
+
   const relevantSteps = plantData
     ? plantData.plantingSteps.filter((step) => step.step === plan.level)
     : [];

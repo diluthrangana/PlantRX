@@ -7,19 +7,19 @@ const Disease = () => {
   const [loading, setLoading] = useState(false);
   const [dragging, setDragging] = useState(false);
 
-  // Handle plant selection
+
   const handlePlantChange = (event) => {
     setSelectedPlant(event.target.value);
     setResult(null);
     setImage(null);
   };
 
-  // Handle file input change
+  
   const handleFileChange = (event) => {
     setImage(event.target.files[0]);
   };
 
-  // Handle drag-and-drop events
+ 
   const handleDragOver = (event) => {
     event.preventDefault();
     setDragging(true);
@@ -37,7 +37,7 @@ const Disease = () => {
     }
   };
 
-  // Predict disease function
+
   const predictDisease = async () => {
     if (!selectedPlant) {
       alert("Please select a plant first.");

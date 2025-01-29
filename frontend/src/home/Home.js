@@ -62,7 +62,7 @@ const Home = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
-                onClick={() => handleCardClick(plan)} // Make the card clickable
+                onClick={() => handleCardClick(plan)} 
               >
                 <div style={styles.overlay}>
                   <h3 style={styles.planName}>{plan.plantName}</h3>
@@ -91,7 +91,7 @@ const Home = () => {
   );
 };
 
-// Styles
+
 const styles = {
   container: {
     padding: "20px",

@@ -9,14 +9,14 @@ const Main = () => {
       backgroundPosition: 'center',
       height: '100vh',
       display: 'flex',
-      justifyContent: 'flex-end', // Align items to the right
+      justifyContent: 'flex-end', 
       alignItems: 'center',
       color: 'white',
       fontFamily: 'Arial, sans-serif',
-      paddingRight: '50px', // Add some padding to the right for spacing
+      paddingRight: '50px', 
     },
     content: {
-      textAlign: 'left', // Right align the text
+      textAlign: 'left', 
     },
     h1: {
       fontSize: '3em',

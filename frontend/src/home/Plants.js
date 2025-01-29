@@ -225,15 +225,15 @@ const Plants = () => {
 const styles = {
   container: {
     padding: "20px",
-    paddingTop: "100px", // Add top padding to prevent overlap with the navbar
+    paddingTop: "100px", 
     textAlign: "center",
     fontFamily: "Arial, sans-serif",
-    width: "75%", // Set the width to 75%
-    position: "absolute", // Position it absolutely
-    left: "0", // Position it on the left side
+    width: "75%", 
+    position: "absolute", 
+    left: "0", 
     top: "0",
     bottom: "0",
-    marginLeft: "0", // Ensure no margin to the left
+    marginLeft: "0", 
   },
   heading: {
     fontSize: "36px",
@@ -245,7 +245,7 @@ const styles = {
   },
   image: {
     width: "100%",
-    height: "500px", // Ensure the image takes full width and a fixed height
+    height: "500px", 
     backgroundSize: "cover",
     backgroundPosition: "center",
     borderRadius: "15px",
@@ -255,8 +255,8 @@ const styles = {
     bottom: "0",
     left: "0",
     width: "100%",
-    height: "75%", // Make sure the overlay is the same height as the image
-    backgroundColor: "rgba(0, 0, 0, 0.3)", // Semi-transparent black background
+    height: "75%", 
+    backgroundColor: "rgba(0, 0, 0, 0.3)", 
     color: "white",
     padding: "20px",
     textAlign: "left",

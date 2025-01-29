@@ -1,39 +1,39 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useUser } from "../contexts/UserContext"; // Import the UserContext
-import plantsData from "../data/plantsData"; // Import the plants data
+import { useUser } from "../contexts/UserContext"; 
+import plantsData from "../data/plantsData"; 
 
 const AddPlantingPlan = ({ isOpen, onClose, onSubmit }) => {
-  const { user } = useUser(); // Access user data from the context
+  const { user } = useUser(); 
   const [plantName, setPlantName] = useState("");
   const [areaSize, setAreaSize] = useState("");
   const [capital, setCapital] = useState("");
   const [plantingDate, setPlantingDate] = useState("");
-  const [level, setLevel] = useState(""); // New state for level
+  const [level, setLevel] = useState(""); 
   const [error, setError] = useState(null);
 
   // Extract plant names from plantsData
   const plantNames = plantsData.Plants.map((plant) => plant.name);
 
-  // Handle form submission
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
+    
     if (!plantName || !plantingDate || !areaSize || !capital) {
       setError("Please fill out all fields.");
       return;
     }
 
     try {
-      // Send data to the backend to save the planting plan
+      
       await axios.post("http://localhost:5000/api/planting-plans", {
         email: user.email, // Use the email from the context
         plantName,
         plantingDate,
         areaSize,
         capital,
-        level: 1, // Include level in the request
+        level: 0, // Include level in the request
       });
 
       // Notify parent component about successful submission

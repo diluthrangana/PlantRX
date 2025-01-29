@@ -96,22 +96,22 @@ const styles = {
   container: {
     display: "flex",
     justifyContent: "flex-end",
-    justifyContent: "right", // Align items to the right
+    justifyContent: "right", 
     alignItems: "center",
     height: "100vh",
-    backgroundImage: 'url(../assets/30399.jpg)', // Use the same background as Login
-    backgroundSize: 'cover', // Ensure the background image covers the container
+    backgroundImage: 'url(../assets/30399.jpg)', 
+    backgroundSize: 'cover', 
     backgroundPosition: 'center',
   },
   formWrapper: {
-    backgroundColor: "rgba(255, 255, 255, 0.3)", // Semi-transparent white background
+    backgroundColor: "rgba(255, 255, 255, 0.3)", 
     padding: "30px",
     borderRadius: "12px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
     width: "100%",
     maxWidth: "400px",
     textAlign: "center",
-    marginRight: "100px", // Add margin to the right for spacing
+    marginRight: "100px", 
   },
   heading: {
     color: "#685752",
@@ -138,7 +138,7 @@ const styles = {
     padding: "10px",
     border: "1px solid #997C70",
     borderRadius: "6px",
-    backgroundColor: "#FDF7F4", // Transparent background for inputs
+    backgroundColor: "#FDF7F4", 
     color: "#685752",
     fontSize: "14px",
     boxSizing: "border-box",
@@ -154,7 +154,7 @@ const styles = {
     padding: "12px",
     fontSize: "14px",
     color: "#FFFFFF",
-    backgroundColor: "transparent", // Transparent background for the button
+    backgroundColor: "transparent", 
     border: "2px #ffffff solid",
     borderRadius: "6px",
     cursor: "pointer",

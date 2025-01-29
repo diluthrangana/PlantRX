@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-import AddPlantingPlan from "./AddPlantingPlan"; // Import the AddPlantingPlan modal
-import { useUser } from "../contexts/UserContext"; // Custom context for user data
+import { useNavigate } from "react-router-dom"; 
+import AddPlantingPlan from "./AddPlantingPlan"; 
+import { useUser } from "../contexts/UserContext"; 
 
 const PlantingPlan = () => {
-  const [plantingPlans, setPlantingPlans] = useState([]); // Store planting plans
-  const [error, setError] = useState(null); // Error state
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
-  const { user } = useUser(); // Get the logged-in user's data
-  const navigate = useNavigate(); // Hook for navigation
+  const [plantingPlans, setPlantingPlans] = useState([]); 
+  const [error, setError] = useState(null); 
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const { user } = useUser(); 
+  const navigate = useNavigate(); 
 
-  // Fetch planting plans
+  
   useEffect(() => {
     if (!user || !user.email) {
       setError("User is not logged in.");
@@ -31,7 +31,7 @@ const PlantingPlan = () => {
     fetchPlantingPlans();
   }, [user]);
 
-  // Navigate to plan details
+  
   const handleCardClick = (plan) => {
     navigate("/planting-plan-details", { state: { plan } });
   };
@@ -119,28 +119,28 @@ const styles = {
   },
   planCard: {
     display: "flex",
-    flexDirection: "row",  // Items will be displayed horizontally
-    alignItems: "center",  // Align text and data horizontally
-    padding: "10px",  // Reduced padding for smaller height
-    borderBottom: "1px solid #ddd",  // Border between each plan item
-    boxShadow: "none",  // Optional: Remove shadow to make it flatter
+    flexDirection: "row",  
+    alignItems: "center",  
+    padding: "10px",  
+    borderBottom: "1px solid #ddd", 
+    boxShadow: "none",  
     cursor: "pointer",
-    height: "10px", // Adjust the height dynamically
+    height: "10px", 
   },
   planName: {
-    fontSize: "16px", // Reduced font size for name
-    marginRight: "20px", // Space between name and other details
+    fontSize: "16px", 
+    marginRight: "20px", 
     color: "#666"
   },
   planDate: {
     fontSize: "14px",
     color: "#666",
-    marginRight: "20px", // Space between date and other details
+    marginRight: "20px", 
   },
   planText: {
     fontSize: "14px",
     color: "#666",
-    marginRight: "20px", // Space between texts
+    marginRight: "20px", 
   },
 };
 
