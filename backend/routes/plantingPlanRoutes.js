@@ -3,7 +3,7 @@ const router = express.Router();
 const PlantingPlan = require("../models/plantingPlanModel");
 const mongoose = require("mongoose");
 
-// Get all planting plans
+
 router.get("/planting-plans", async (req, res) => {
   try {
     const plans = await PlantingPlan.find();
@@ -16,12 +16,10 @@ router.get("/planting-plans", async (req, res) => {
   }
 });
 
-// Add a new planting plan
 router.post("/planting-plans", async (req, res) => {
   try {
     const { plantName, plantingDate, areaSize, capital, email, level } = req.body;
 
-    // Validate required fields
     if (!plantName || !plantingDate || areaSize === undefined || capital === undefined || !email || !level) {
       return res.status(400).json({
         message: "All fields are required (plantName, plantingDate, areaSize, capital, email, level).",
