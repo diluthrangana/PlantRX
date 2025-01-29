@@ -51,17 +51,14 @@ router.post("/planting-plans", async (req, res) => {
   }
 });
 
-// Delete a planting plan by ID
 router.delete("/planting-plans/:id", async (req, res) => {
   try {
     const { id } = req.params;
 
-    // Check if the provided ID is a valid ObjectId
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid planting plan ID." });
     }
 
-    // Find and delete the plan
     const deletedPlan = await PlantingPlan.findByIdAndDelete(id);
 
     if (!deletedPlan) {
@@ -76,5 +73,40 @@ router.delete("/planting-plans/:id", async (req, res) => {
     });
   }
 });
+
+router.put("/planting-plans/:id/level", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { level } = req.body;
+
+    console.log("Received level:", level); 
+
+    if (level < 0 || level > 5) {
+      return res.status(400).json({ message: "Level must be between 0 and 5." });
+    }
+
+    const updatedPlan = await PlantingPlan.findByIdAndUpdate(
+      id,
+      { level },
+      { new: true }
+    );
+
+    if (!updatedPlan) {
+      return res.status(404).json({ message: "Planting plan not found." });
+    }
+
+    res.status(200).json({
+      message: "Planting plan level updated successfully!",
+      data: updatedPlan,
+    });
+  } catch (error) {
+    console.error("Error updating level:", error); 
+    res.status(500).json({
+      message: "Error updating planting plan level",
+      error: error.message,
+    });
+  }
+});
+
 
 module.exports = router;

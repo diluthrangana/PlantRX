@@ -84,8 +84,8 @@ const Disease = () => {
   };
 
   return (
-    <div style={{ width: "60%", marginLeft: "10%", marginTop: "5%", fontFamily: "Roboto, sans-serif" }}>
-      <h1 style={{ marginBottom: "20px", color: "#333", fontWeight: 700 }}>Plant Disease Prediction</h1>
+    <div style={{ width: "60%", marginLeft: "25px", marginTop: "5%", fontFamily: "Roboto, sans-serif" }}>
+      <h1 style={{ marginBottom: "20px", color: "#333", fontWeight: 700, fontSize: "20px", color: "#685752" }}>Plant Disease Prediction</h1>
 
       <select
         value={selectedPlant}

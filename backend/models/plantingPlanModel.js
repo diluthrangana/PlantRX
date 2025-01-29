@@ -19,11 +19,11 @@ const plantingPlanSchema = new mongoose.Schema({
     required: true,
     min: 0,
   },
-  email: { // Store user email
+  email: { 
     type: String,
     required: false,
   },
-  level: { // Add level to the schema
+  level: { 
     type: Number,
     required: true,
   },

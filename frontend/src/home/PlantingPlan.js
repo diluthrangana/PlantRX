@@ -85,6 +85,7 @@ const PlantingPlan = () => {
 const styles = {
   container: {
     marginTop: "40px",
+    marginLeft: "10px",
     padding: "20px",
     fontFamily: "Arial, sans-serif",
     width: "75%",

@@ -95,9 +95,10 @@ const Home = () => {
 const styles = {
   container: {
     padding: "20px",
+    paddingLeft: "25px",
     fontFamily: "Arial, sans-serif",
     width: "75%",
-    marginTop: "50px",
+    marginTop: "40px",
   },
   errorMessage: {
     color: "red",

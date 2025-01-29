@@ -17,7 +17,7 @@ const Navbar = () => {
         backgroundColor: "#8EB486", // Darker with 0.3 opacity
         boxShadow: "none",
         zIndex: 1000,
-        padding: "10px 20px",
+        padding: "5px 20px",
       }}
     >
       <div
@@ -76,12 +76,12 @@ const Navbar = () => {
           style={{
             position: "absolute",
             width: "150px",
-            top: "60px",
+            top: "50px",
             right: 0,
             backgroundColor: "#997C70", 
             color: "#fff",
             listStyle: "none",
-            padding: "20px 20px",
+            padding: "10px 10px",
             margin: 0,
             textAlign: "left",
           }}

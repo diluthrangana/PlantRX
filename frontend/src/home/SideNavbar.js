@@ -81,7 +81,7 @@ const styles = {
   icon: {
     fontSize: "20px",
     marginRight: "15px",
-    color: "997C70", // Dark text color for better contrast
+    color: "#997C70", // Dark text color for better contrast
   },
   linkText: {
     fontSize: "15px",
