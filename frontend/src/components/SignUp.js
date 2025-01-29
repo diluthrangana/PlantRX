@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../contexts/UserContext"; // Import the user context
+import { useUser } from "../contexts/UserContext"; 
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
@@ -95,19 +95,23 @@ const SignUp = () => {
 const styles = {
   container: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-end",
+    justifyContent: "right", // Align items to the right
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "#FDF7F4",
+    backgroundImage: 'url(../assets/30399.jpg)', // Use the same background as Login
+    backgroundSize: 'cover', // Ensure the background image covers the container
+    backgroundPosition: 'center',
   },
   formWrapper: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "rgba(255, 255, 255, 0.3)", // Semi-transparent white background
     padding: "30px",
     borderRadius: "12px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
     width: "100%",
     maxWidth: "400px",
     textAlign: "center",
+    marginRight: "100px", // Add margin to the right for spacing
   },
   heading: {
     color: "#685752",
@@ -134,13 +138,13 @@ const styles = {
     padding: "10px",
     border: "1px solid #997C70",
     borderRadius: "6px",
-    backgroundColor: "#FDF7F4",
+    backgroundColor: "#FDF7F4", // Transparent background for inputs
     color: "#685752",
     fontSize: "14px",
     boxSizing: "border-box",
   },
   error: {
-    color: "#f44336",
+    color: "#685752",
     fontSize: "12px",
     textAlign: "center",
     marginBottom: "10px",
@@ -150,8 +154,8 @@ const styles = {
     padding: "12px",
     fontSize: "14px",
     color: "#FFFFFF",
-    backgroundColor: "#8EB486",
-    border: "none",
+    backgroundColor: "transparent", // Transparent background for the button
+    border: "2px #ffffff solid",
     borderRadius: "6px",
     cursor: "pointer",
     transition: "background-color 0.3s ease",
@@ -159,10 +163,10 @@ const styles = {
   switchText: {
     marginTop: "15px",
     fontSize: "14px",
-    color: "#685752",
+    color: "#000000",
   },
   link: {
-    color: "#997C70",
+    color: "#ffffff",
     textDecoration: "none",
     fontWeight: "bold",
   },

@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaUserAlt, FaSignOutAlt } from "react-icons/fa"; // Importing icons
+import { FaUserAlt, FaSignOutAlt } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const applyHoverEffect = (e) => {
+    e.target.style.transform = "scale(1.1)";
+    e.target.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.8)";
+  };
+
+  const removeHoverEffect = (e) => {
+    e.target.style.transform = "scale(1)";
+    e.target.style.boxShadow = "none";
+  };
 
   return (
     <nav
@@ -14,7 +25,7 @@ const Navbar = () => {
         top: 0,
         left: 0,
         right: 0,
-        backgroundColor: "#8EB486", // Darker with 0.3 opacity
+        backgroundColor: "#8EB486",
         boxShadow: "none",
         zIndex: 1000,
         padding: "5px 20px",
@@ -30,10 +41,9 @@ const Navbar = () => {
         }}
       >
         <div>
-          <h1 style={{ color: "#fff", margin: 0 }}>Logo</h1>
+          <img src={logo} alt="Logo" style={{ height: "30px" }} />
         </div>
 
-        {/* Desktop Menu */}
         <ul
           style={{
             display: "flex",
@@ -43,34 +53,52 @@ const Navbar = () => {
           }}
         >
           <li style={{ margin: "0 20px" }}>
-            <Link to="/home" style={linkStyle}>
+            <Link
+              to="/home"
+              style={linkStyle}
+              onMouseEnter={applyHoverEffect}
+              onMouseLeave={removeHoverEffect}
+            >
               Home
             </Link>
           </li>
           <li style={{ margin: "0 20px" }}>
-            <Link to="/about" style={linkStyle}>
+            <Link
+              to="/about"
+              style={linkStyle}
+              onMouseEnter={applyHoverEffect}
+              onMouseLeave={removeHoverEffect}
+            >
               About
             </Link>
           </li>
           <li style={{ margin: "0 20px" }}>
-            <Link to="/services" style={linkStyle}>
+            <Link
+              to="/services"
+              style={linkStyle}
+              onMouseEnter={applyHoverEffect}
+              onMouseLeave={removeHoverEffect}
+            >
               Services
             </Link>
           </li>
           <li style={{ margin: "0 20px" }}>
-            <Link to="/contact" style={linkStyle}>
+            <Link
+              to="/contact"
+              style={linkStyle}
+              onMouseEnter={applyHoverEffect}
+              onMouseLeave={removeHoverEffect}
+            >
               Contact
             </Link>
           </li>
         </ul>
 
-        {/* Mobile Menu */}
         <div className="mobile-menu" onClick={toggleMenu}>
           <span style={{ fontSize: "30px", color: "#fff" }}>&#9776;</span>
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <ul
           style={{
@@ -78,7 +106,7 @@ const Navbar = () => {
             width: "150px",
             top: "50px",
             right: 0,
-            backgroundColor: "#997C70", 
+            backgroundColor: "#997C70",
             color: "#fff",
             listStyle: "none",
             padding: "10px 10px",
@@ -87,12 +115,22 @@ const Navbar = () => {
           }}
         >
           <li style={{ padding: "10px 0" }}>
-            <Link to="/login" style={linkStyle}>
+            <Link
+              to="/login"
+              style={linkStyle}
+              onMouseEnter={applyHoverEffect}
+              onMouseLeave={removeHoverEffect}
+            >
               <FaUserAlt style={{ marginRight: "10px" }} /> Change User
             </Link>
           </li>
           <li style={{ padding: "10px 0" }}>
-            <Link to="/" style={linkStyle}>
+            <Link
+              to="/"
+              style={linkStyle}
+              onMouseEnter={applyHoverEffect}
+              onMouseLeave={removeHoverEffect}
+            >
               <FaSignOutAlt style={{ marginRight: "10px" }} /> Logout
             </Link>
           </li>
@@ -102,7 +140,6 @@ const Navbar = () => {
   );
 };
 
-// Style for the links to include hover glow effect
 const linkStyle = {
   color: "#fff",
   textDecoration: "none",
@@ -110,31 +147,7 @@ const linkStyle = {
   padding: "5px 10px",
   fontSize: "16px",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
-  display: "inline-block", // Ensure the transform works correctly
+  display: "inline-block",
 };
-
-// Hover effect
-const linkHoverStyle = {
-  transform: "scale(1.1)", // Scale up the button
-  boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)", // Glow effect
-};
-
-// Apply hover effect to all links
-const applyHoverEffect = (e) => {
-  e.target.style.transform = linkHoverStyle.transform;
-  e.target.style.boxShadow = linkHoverStyle.boxShadow;
-};
-
-// Remove hover effect when mouse leaves
-const removeHoverEffect = (e) => {
-  e.target.style.transform = "scale(1)";
-  e.target.style.boxShadow = "none";
-};
-
-// Add event listeners to all links
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('mouseenter', applyHoverEffect);
-  link.addEventListener('mouseleave', removeHoverEffect);
-});
 
 export default Navbar;

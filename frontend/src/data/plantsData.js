@@ -390,7 +390,272 @@ const plantsData = {
           ]
         }
       ]
-    }
+    },
+    
+      {
+        "name": "Cassava",
+        "imagePath": "images/cassava.jpg",
+        "description": "Cassava is a starchy root vegetable native to South America. It is a primary food source in many parts of the world, particularly in Africa and Asia. Cassava requires a tropical climate with well-drained soil and adequate rainfall. It grows best in areas with temperatures between 25-30°C and requires a long growing season.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Cassava grows best in well-drained, loose soil with a pH between 5.5 and 7.",
+            "instructions": [
+              "Test the soil and adjust pH if necessary.",
+              "Add organic manure or compost to improve soil fertility.",
+              "Loosen the soil to a depth of about 12-18 inches to allow root development."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Cuttings",
+            "description": "Cassava is grown from stem cuttings, which should be about 6-8 inches long.",
+            "instructions": [
+              "Plant the cuttings at a 45-degree angle, burying two-thirds of the cutting.",
+              "Space the cuttings about 1 meter apart in rows."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Cassava requires regular watering during dry periods but does not tolerate waterlogged soil.",
+            "instructions": [
+              "Water deeply during the dry season to maintain consistent moisture.",
+              "Avoid overwatering to prevent root rot."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Fertilization is important to ensure healthy growth and tuber development.",
+            "instructions": [
+              "Apply a balanced fertilizer at planting time.",
+              "Use additional fertilizer during the growing season, particularly nitrogen-based fertilizers."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Cassava is typically ready for harvest 8-12 months after planting, depending on the variety.",
+            "instructions": [
+              "Harvest by digging up the tubers carefully with a spade or fork.",
+              "Avoid leaving the tubers in the soil for too long as they may become fibrous."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Potato",
+        "imagePath": "images/potato.jpg",
+        "description": "Potatoes are one of the most widely consumed root vegetables in the world. They require cool temperatures and well-drained soil. Potatoes are typically grown from seed potatoes, which are pieces of a potato tuber that contain at least one eye.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Potatoes grow best in slightly acidic soil with a pH of 5.5 to 6.5.",
+            "instructions": [
+              "Test the soil and adjust the pH if necessary.",
+              "Loosen the soil to a depth of 6-8 inches, removing rocks and debris.",
+              "Incorporate organic compost to improve soil texture and fertility."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seed Potatoes",
+            "description": "Seed potatoes should be planted in rows with 12-15 inches of space between them.",
+            "instructions": [
+              "Cut seed potatoes into pieces, each with at least one eye.",
+              "Plant the pieces with the eyes facing up, 4 inches deep."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Potatoes require consistent moisture throughout the growing season.",
+            "instructions": [
+              "Water deeply once or twice a week, ensuring the water reaches the root zone.",
+              "Mulch around the plants to retain moisture and suppress weeds."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Potatoes are moderate feeders and benefit from a balanced fertilizer.",
+            "instructions": [
+              "Apply a nitrogen-rich fertilizer early in the growing season.",
+              "Side-dress with compost or balanced fertilizer every 4-6 weeks."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Potatoes are ready for harvest when the plants begin to die back, usually around 70-120 days after planting.",
+            "instructions": [
+              "Use a spade or fork to gently lift the potatoes from the soil.",
+              "Cure the potatoes in a cool, dry place for about 1-2 weeks before storage."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Yams",
+        "imagePath": "images/yams.jpg",
+        "description": "Yams are starchy tubers grown in warm climates. They are similar to sweet potatoes but are generally larger and have a rougher skin. Yams require a long growing season, plenty of sunlight, and well-draining soil.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Yams thrive in loose, well-drained soil with a pH of 5.5 to 6.5.",
+            "instructions": [
+              "Test and amend the soil if necessary.",
+              "Loosen the soil to a depth of at least 8 inches.",
+              "Incorporate organic matter such as compost to improve fertility."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Slips or Tubers",
+            "description": "Yams can be grown from slips or small tubers.",
+            "instructions": [
+              "Plant slips or tubers 4-6 inches deep, spacing them 12-18 inches apart.",
+              "Ensure the tubers are planted in well-prepared, warm soil."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Yams require moderate to high amounts of water.",
+            "instructions": [
+              "Water regularly to keep the soil moist but not soggy.",
+              "Ensure good drainage to avoid root rot."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Fertilization is essential for good yam growth.",
+            "instructions": [
+              "Use a balanced fertilizer with adequate nitrogen, phosphorus, and potassium.",
+              "Apply fertilizer every 4-6 weeks during the growing season."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Yams are ready to harvest when the leaves begin to yellow, usually 8-12 months after planting.",
+            "instructions": [
+              "Gently lift the tubers from the soil, being careful not to damage them.",
+              "Cure the yams in a dry, warm area for 1-2 weeks before storing."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rice",
+        "imagePath": "images/rice.jpg",
+        "description": "Rice is a staple food crop grown primarily in flooded fields known as paddies. It requires a warm, humid climate with consistent rainfall. Rice grows best in soils with a pH between 5.5 and 7.5.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Field",
+            "description": "Rice requires a flooded environment for optimal growth.",
+            "instructions": [
+              "Ensure the soil is well-prepared with good water-holding capacity.",
+              "Flood the field with about 2-4 inches of water to create a suitable growing environment."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seeds",
+            "description": "Rice can be sown either by broadcasting or by transplanting seedlings.",
+            "instructions": [
+              "Broadcast the seeds evenly in flooded fields, or transplant seedlings when they are about 3-4 weeks old."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Rice requires constant water during its growing period.",
+            "instructions": [
+              "Keep the field flooded with 2-4 inches of water throughout the growing season.",
+              "Ensure the water level is maintained to prevent drought stress."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Fertilization is essential for rice growth, particularly during the vegetative phase.",
+            "instructions": [
+              "Apply a nitrogen-rich fertilizer at the beginning of the growing season.",
+              "Use additional fertilizers at key stages of growth, including flowering."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Rice is typically ready for harvest when the grains are hard and dry.",
+            "instructions": [
+              "Use a combine harvester to collect the rice.",
+              "Allow the rice to dry before storing."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maize",
+        "imagePath": "images/maize.jpg",
+        "description": "Maize (corn) is a widely grown cereal grain with high nutritional value. It requires a warm growing season with plenty of sunlight. Maize is typically grown in well-drained, fertile soils.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Maize grows best in fertile, well-drained soils with a pH between 5.8 and 7.",
+            "instructions": [
+              "Test the soil and amend if necessary.",
+              "Loosen the soil to a depth of 6-8 inches and incorporate organic matter."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seeds",
+            "description": "Maize is usually grown from seeds that are planted 1-2 inches deep.",
+            "instructions": [
+              "Space the seeds about 8-12 inches apart, depending on the variety.",
+              "Plant the seeds in rows, ensuring each seed has sufficient space."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Maize requires regular watering, especially during dry periods.",
+            "instructions": [
+              "Water deeply once a week, ensuring the water reaches the root zone.",
+              "Avoid overwatering to prevent waterlogging."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Maize is a heavy feeder and requires adequate fertilization.",
+            "instructions": [
+              "Apply nitrogen fertilizer early in the growing season.",
+              "Use additional fertilizers as the plants grow, especially during the tasseling phase."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Maize is ready for harvest when the kernels are firm and the husks turn brown.",
+            "instructions": [
+              "Harvest by hand or using a combine harvester.",
+              "Allow the harvested maize to dry before storing."
+            ]
+          }
+        ]
+      }
+    
+    
   ]
 }
 export default plantsData;

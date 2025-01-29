@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHome, FaSeedling, FaVirus, FaSignOutAlt, FaPlus, FaComment } from "react-icons/fa";
+import { FaHome, FaSeedling, FaVirus, FaSignOutAlt, FaPlus, FaComment, FaCloudRain } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // For navigation
 
 const SideNavbar = () => {
@@ -27,6 +27,10 @@ const SideNavbar = () => {
           <div style={styles.navItem} onClick={() => navigate("/desease")}>
             <FaVirus style={styles.icon} />
             <span style={styles.linkText}>Deseases</span>
+          </div>
+          <div style={styles.navItem} onClick={() => navigate("/chatbot")}>
+            <FaCloudRain style={styles.icon} />
+            <span style={styles.linkText}>Weather</span>
           </div>
           <div style={styles.navItem} onClick={() => navigate("/chatbot")}>
             <FaComment style={styles.icon} />

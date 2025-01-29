@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
-// Create a context
+
 const UserContext = createContext();
 
 // Provider component
