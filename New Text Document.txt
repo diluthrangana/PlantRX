@@ -1,33 +1,21 @@
-/planting-guide
-├── /public
-│   ├── /images
-│   └── /favicon.ico
-│
-├── /src
-│   ├── /app
-│   │   ├── /auth
-│   │   │   ├── login.js
-│   │   │   ├── signup.js
-│   │   │   └── layout.js
-│   │   ├── /home
-│   │   │   └── page.js
-│   │   ├── /layout.js
-│   │   ├── /page.js
-│   │   └── /error.js
-│   │
-│   ├── /components
-│   │   ├── Navbar.js
-│   │   ├── Layout.js
-│   │   ├── AuthForm.js
-│   │
-│   ├── /models
-│   │   ├── User.js
-│   │
-│   ├── /utils
-│   │   ├── auth.js
-│   │   └── dbConnect.js
-│
-├── .env.local
-├── package.json
-├── next.config.js
-└── README.md
+banana
+pineapple
+papaya
+
+brinjal
+tomato
+okra
+capsicum
+pumpkin
+bitter gourd
+snake gourd
+
+sweat potato
+cassava
+potato
+yams
+
+rice
+maize
+
+

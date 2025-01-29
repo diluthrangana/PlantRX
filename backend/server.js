@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");  // Import CORS middleware
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+const plantingPlanRoutes = require("./routes/plantingPlanRoutes");
 
 dotenv.config();
 connectDB();
@@ -17,6 +18,7 @@ app.use(cors());  // Enable CORS
 
 app.use(express.json()); // For parsing JSON bodies
 app.use("/api/auth", authRoutes); // Auth routes
+app.use("/api", plantingPlanRoutes)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

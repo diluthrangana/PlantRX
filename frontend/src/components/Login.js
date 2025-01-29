@@ -1,26 +1,24 @@
-// src/Login.js
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../data/UserContext";  // Import the user context
+import { useUser } from "../contexts/UserContext"; // Import the user context
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const { loginUser } = useUser();  // Access loginUser function from context
+  const { loginUser } = useUser();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post("http://localhost:5000/api/auth/login", {
         email,
         password,
       });
-      loginUser({ email });  // Store user data in context
-      navigate("/home", { state: { email } });  // Navigate to Home page with state
+      loginUser({ email: email });
+      navigate("/home", { state: { email } });
     } catch (err) {
       setError(err.response?.data?.message || "Invalid credentials");
     }
@@ -29,7 +27,7 @@ const Login = () => {
   return (
     <div style={styles.container}>
       <div style={styles.formWrapper}>
-        <h2 style={styles.heading}>LogIn</h2>
+        <h2 style={styles.heading}>Log In</h2>
         <form onSubmit={handleSubmit} style={styles.form}>
           <div style={styles.inputGroup}>
             <label style={styles.label}>Email</label>
@@ -39,6 +37,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               style={styles.input}
+              required
             />
           </div>
           <div style={styles.inputGroup}>
@@ -49,18 +48,14 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
               style={styles.input}
+              required
             />
           </div>
           {error && <p style={styles.error}>{error}</p>}
-          <button type="submit" style={styles.submitButton}>
-            Login
-          </button>
+          <button type="submit" style={styles.submitButton}>Login</button>
         </form>
         <p style={styles.switchText}>
-          Don't have an account?{" "}
-          <a href="/signup" style={styles.link}>
-            Register here
-          </a>
+          Don't have an account? <a href="/signup" style={styles.link}>Register here</a>
         </p>
       </div>
     </div>
@@ -73,52 +68,45 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    margin: 0,
-    backgroundColor: "#eaeef1",
+    backgroundColor: "#FDF7F4",
   },
   formWrapper: {
-    backgroundColor: "#fff",
+    backgroundColor: "#FFFFFF",
     padding: "30px",
-    borderRadius: "10px",
-    boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1)",
+    borderRadius: "12px",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
     width: "100%",
-    maxWidth: "450px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "stretch",
+    maxWidth: "400px",
+    textAlign: "center",
   },
   heading: {
-    textAlign: "center",
-    color: "#2f3a48",
-    fontFamily: "'Roboto', sans-serif",
-    fontWeight: "600",
-    marginBottom: "20px",
+    color: "#685752",
     fontSize: "24px",
+    fontWeight: "bold",
+    marginBottom: "20px",
   },
   form: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "stretch",
   },
   inputGroup: {
     marginBottom: "15px",
+    textAlign: "left",
   },
   label: {
     display: "block",
-    color: "#444",
-    fontSize: "12px",
-    fontWeight: "500",
-    marginBottom: "6px",
+    fontSize: "14px",
+    color: "#685752",
+    marginBottom: "5px",
   },
   input: {
     width: "100%",
     padding: "10px",
-    fontSize: "14px",
-    border: "1px solid #ddd",
+    border: "1px solid #997C70",
     borderRadius: "6px",
-    backgroundColor: "#f5f7fa",
-    color: "#333",
-    transition: "border-color 0.3s ease",
+    backgroundColor: "#FDF7F4",
+    color: "#685752",
+    fontSize: "14px",
     boxSizing: "border-box",
   },
   error: {
@@ -131,24 +119,22 @@ const styles = {
     width: "100%",
     padding: "12px",
     fontSize: "14px",
-    color: "#fff",
-    backgroundColor: "#1a73e8",
+    color: "#FFFFFF",
+    backgroundColor: "#8EB486",
     border: "none",
     borderRadius: "6px",
     cursor: "pointer",
     transition: "background-color 0.3s ease",
-    marginTop: "10px",
   },
   switchText: {
     marginTop: "15px",
-    textAlign: "center",
     fontSize: "14px",
-    color: "#444",
+    color: "#685752",
   },
   link: {
-    color: "#1a73e8",
+    color: "#997C70",
     textDecoration: "none",
-    fontWeight: "500",
+    fontWeight: "bold",
   },
 };
 

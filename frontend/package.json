@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^1.7.9",
+    "browserify-zlib": "^0.2.0",
     "cra-template": "1.2.0",
     "framer-motion": "^12.0.5",
     "frontend": "file:",
@@ -11,8 +12,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.4",
     "webapp": "file:"
   },

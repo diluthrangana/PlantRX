@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63c631d1-64cb-49fa-8635-c34f41a6764b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../New Text Document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../New Text Document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/a.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/banana_box.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/cart.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/product1.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/shopping_cart.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/store.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/store1.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/store_shelves.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled1.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled1.blend1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/vintage-stained-wooden-wall-background-texture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/AddPlantingPlan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Billing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ProtectedPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/data/UserContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2sEBeSRLPzn3GAOXgWTYuLmTMw5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/PlantRX/api&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63c631d1-64cb-49fa-8635-c34f41a6764b" name="Changes" comment="" />
+      <created>1738010949549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738010949549</updated>
+    </task>
+    <servers />
+  </component>
+</project>

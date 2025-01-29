@@ -60,7 +60,7 @@ def read_file_as_image(data) -> np.ndarray:
         image = image[..., :3]
     return image
 
-@app.post("/predict")
+@app.post("/predict/tomato")
 async def predict(file: UploadFile = File(...)):
     # Check if the model was loaded correctly
     if MODEL is None:

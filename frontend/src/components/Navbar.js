@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaUserAlt, FaSignOutAlt } from "react-icons/fa"; // Importing icons
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
         top: 0,
         left: 0,
         right: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.3)", // Darker with 0.3 opacity
+        backgroundColor: "#8EB486", // Darker with 0.3 opacity
         boxShadow: "none",
         zIndex: 1000,
         padding: "10px 20px",
@@ -42,7 +43,7 @@ const Navbar = () => {
           }}
         >
           <li style={{ margin: "0 20px" }}>
-            <Link to="/" style={linkStyle}>
+            <Link to="/home" style={linkStyle}>
               Home
             </Link>
           </li>
@@ -74,35 +75,25 @@ const Navbar = () => {
         <ul
           style={{
             position: "absolute",
+            width: "150px",
             top: "60px",
-            left: 0,
             right: 0,
-            backgroundColor: "#000",
+            backgroundColor: "#997C70", 
             color: "#fff",
             listStyle: "none",
-            padding: "20px 0",
+            padding: "20px 20px",
             margin: 0,
-            textAlign: "center",
+            textAlign: "left",
           }}
         >
           <li style={{ padding: "10px 0" }}>
+            <Link to="/login" style={linkStyle}>
+              <FaUserAlt style={{ marginRight: "10px" }} /> Change User
+            </Link>
+          </li>
+          <li style={{ padding: "10px 0" }}>
             <Link to="/" style={linkStyle}>
-              Home
-            </Link>
-          </li>
-          <li style={{ padding: "10px 0" }}>
-            <Link to="/about" style={linkStyle}>
-              About
-            </Link>
-          </li>
-          <li style={{ padding: "10px 0" }}>
-            <Link to="/services" style={linkStyle}>
-              Services
-            </Link>
-          </li>
-          <li style={{ padding: "10px 0" }}>
-            <Link to="/contact" style={linkStyle}>
-              Contact
+              <FaSignOutAlt style={{ marginRight: "10px" }} /> Logout
             </Link>
           </li>
         </ul>
@@ -116,19 +107,34 @@ const linkStyle = {
   color: "#fff",
   textDecoration: "none",
   position: "relative",
-  padding: "5px 0",
+  padding: "5px 10px",
   fontSize: "16px",
-  transition: "color 0.3s ease",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  display: "inline-block", // Ensure the transform works correctly
 };
 
+// Hover effect
 const linkHoverStyle = {
-  color: "#fff",
-  textDecoration: "none",
-  position: "relative",
-  padding: "5px 0",
-  fontSize: "16px",
-  transition: "color 0.3s ease",
-  boxShadow: "0 0 10px rgba(0, 255, 255, 0.8)", // Glow effect
+  transform: "scale(1.1)", // Scale up the button
+  boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)", // Glow effect
 };
+
+// Apply hover effect to all links
+const applyHoverEffect = (e) => {
+  e.target.style.transform = linkHoverStyle.transform;
+  e.target.style.boxShadow = linkHoverStyle.boxShadow;
+};
+
+// Remove hover effect when mouse leaves
+const removeHoverEffect = (e) => {
+  e.target.style.transform = "scale(1)";
+  e.target.style.boxShadow = "none";
+};
+
+// Add event listeners to all links
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('mouseenter', applyHoverEffect);
+  link.addEventListener('mouseleave', removeHoverEffect);
+});
 
 export default Navbar;
