@@ -653,8 +653,216 @@ const plantsData = {
             ]
           }
         ]
-      }
-    
+      },
+      {
+        "name": "Brinjal",
+        "imagePath": "images/brinjal.jpg",
+        "description": "Brinjal, also known as eggplant, is a warm-season crop that thrives in well-drained soil with a pH of 5.5-6.8. It requires warm temperatures and full sunlight for optimal growth.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Brinjal grows best in fertile, well-drained soil.",
+            "instructions": [
+              "Loosen the soil and add compost or organic matter.",
+              "Ensure good drainage to prevent root rot."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seeds or Seedlings",
+            "description": "Brinjal can be grown from seeds or transplanted seedlings.",
+            "instructions": [
+              "Start seeds indoors 6-8 weeks before transplanting.",
+              "Plant seedlings in the field with 18-24 inches spacing between plants."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Brinjal requires regular watering to support fruit development.",
+            "instructions": [
+              "Water deeply at least twice a week.",
+              "Avoid waterlogging to prevent root diseases."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Brinjal benefits from balanced fertilization.",
+            "instructions": [
+              "Apply compost or organic fertilizer at planting.",
+              "Use nitrogen-rich fertilizers during vegetative growth."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Brinjal is ready for harvest when the fruits are firm and glossy.",
+            "instructions": [
+              "Harvest using a sharp knife or pruning shears.",
+              "Pick fruits before they become overripe for better taste."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tomato",
+        "imagePath": "images/tomato.jpg",
+        "description": "Tomatoes are warm-season crops that require well-drained soil with a pH between 6.0 and 6.8. They need full sunlight for optimal fruit production.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Tomatoes grow best in fertile, well-aerated soil.",
+            "instructions": [
+              "Loosen the soil and mix in compost or organic matter.",
+              "Ensure good drainage to prevent root rot."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seeds or Seedlings",
+            "description": "Tomatoes can be grown from seeds or transplanted seedlings.",
+            "instructions": [
+              "Start seeds indoors 6-8 weeks before transplanting.",
+              "Plant seedlings in the field with 18-24 inches spacing."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Tomatoes need consistent watering to avoid fruit cracking.",
+            "instructions": [
+              "Water deeply 2-3 times a week.",
+              "Avoid overhead watering to reduce disease risk."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Tomatoes require balanced nutrients for healthy growth.",
+            "instructions": [
+              "Apply a phosphorus-rich fertilizer at planting.",
+              "Use potassium-based fertilizer during fruiting."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Tomatoes are ready for harvest when they turn red and firm.",
+            "instructions": [
+              "Pick fruits gently to avoid damage.",
+              "Harvest regularly to encourage more production."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Okra",
+        "imagePath": "images/okra.jpg",
+        "description": "Okra, also known as lady's finger, is a warm-season vegetable that thrives in well-drained, loamy soil with a pH of 6.0-6.8. It requires full sun and warm temperatures for optimal growth.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Okra prefers well-drained, nutrient-rich soil.",
+            "instructions": [
+              "Loosen the soil and add compost for better fertility.",
+              "Ensure good drainage to prevent root diseases."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seeds",
+            "description": "Okra is usually grown from seeds.",
+            "instructions": [
+              "Sow seeds directly in the field, 1 inch deep.",
+              "Space plants about 12-18 inches apart."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Okra needs regular moisture for good growth.",
+            "instructions": [
+              "Water deeply once or twice a week.",
+              "Avoid excessive watering to prevent root rot."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Fertilizing helps okra produce more pods.",
+            "instructions": [
+              "Use a balanced fertilizer at planting.",
+              "Apply additional fertilizer during flowering."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Okra is ready to harvest when pods are 2-3 inches long.",
+            "instructions": [
+              "Harvest regularly to encourage continuous production.",
+              "Use a knife to cut pods, avoiding damage to the plant."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Capsicum",
+        "imagePath": "images/capsicum.jpg",
+        "description": "Capsicum, also known as bell pepper, is a warm-season crop that thrives in well-drained, fertile soil with a pH of 6.0-6.8. It requires warm temperatures and consistent watering.",
+        "plantingSteps": [
+          {
+            "step": 1,
+            "title": "Prepare the Soil",
+            "description": "Capsicum prefers well-drained, nutrient-rich soil.",
+            "instructions": [
+              "Loosen the soil and mix in compost or organic matter.",
+              "Ensure good drainage to prevent root rot."
+            ]
+          },
+          {
+            "step": 2,
+            "title": "Plant the Seeds or Seedlings",
+            "description": "Capsicum can be grown from seeds or transplanted seedlings.",
+            "instructions": [
+              "Start seeds indoors 6-8 weeks before transplanting.",
+              "Plant seedlings with 18-24 inches spacing."
+            ]
+          },
+          {
+            "step": 3,
+            "title": "Watering",
+            "description": "Capsicum needs consistent moisture to develop good fruits.",
+            "instructions": [
+              "Water deeply 2-3 times a week.",
+              "Avoid overwatering to prevent root diseases."
+            ]
+          },
+          {
+            "step": 4,
+            "title": "Fertilizing",
+            "description": "Capsicum benefits from balanced fertilization.",
+            "instructions": [
+              "Apply phosphorus-rich fertilizer at planting.",
+              "Use potassium-based fertilizer during fruiting."
+            ]
+          },
+          {
+            "step": 5,
+            "title": "Harvesting",
+            "description": "Capsicum is ready for harvest when the fruits reach full color.",
+            "instructions": [
+              "Pick fruits gently to avoid damaging the plant.",
+              "Harvest regularly to encourage more production."
+            ]
+          }
+        ]
+      },
+          
     
   ]
 }

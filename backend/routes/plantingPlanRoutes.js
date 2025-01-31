@@ -79,7 +79,7 @@ router.put("/planting-plans/:id/level", async (req, res) => {
 
     console.log("Received level:", level); 
 
-    if (level < 0 || level > 5) {
+    if (level < 0 || level > 6) {
       return res.status(400).json({ message: "Level must be between 0 and 5." });
     }
 

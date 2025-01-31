@@ -33,7 +33,7 @@ const AddPlantingPlan = ({ isOpen, onClose, onSubmit }) => {
         plantingDate,
         areaSize,
         capital,
-        level: 0, // Include level in the request
+        level: 1, // Include level in the request
       });
 
       // Notify parent component about successful submission
@@ -88,7 +88,7 @@ const AddPlantingPlan = ({ isOpen, onClose, onSubmit }) => {
             />
           </div>
           <div style={styles.inputGroup}>
-            <label style={styles.label}>Capital ($)</label>
+            <label style={styles.label}>Capital (Rs)</label>
             <input
               type="number"
               value={capital}

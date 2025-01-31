@@ -54,7 +54,7 @@ const Main = () => {
           <Link to="/login">
             <button 
               style={styles.button}
-              onMouseEnter={(e) => e.target.style.backgroundColor = 'white'}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#8EB486'}
               onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
             >
               Login
@@ -64,7 +64,7 @@ const Main = () => {
             <button 
               style={styles.button}
               onMouseEnter={(e) => e.target.style.backgroundColor = '#8EB486'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = '#8EB486'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
             >
               Sign Up
             </button>
