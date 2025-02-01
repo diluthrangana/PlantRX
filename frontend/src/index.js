@@ -1,7 +1,7 @@
 // src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
-import './index.css'; // Ensure the correct path to your CSS file
+import './index.css'; 
 import App from "./App";
 import reportWebVitals from './reportWebVitals';
 import "slick-carousel/slick/slick.css";

@@ -12,10 +12,11 @@ import { UserProvider } from "./contexts/UserContext";
 import PlantingPlan from "./home/PlantingPlan";
 import Plants from "./home/Plants";
 import Chatbot from "./home/Chatbot";
+import MyCalendar from "./home/MyCalendar";
 
 function AppContent() {
   const location = useLocation();
-  const hideNavbarRoutes = ["/", "/login", "/signup"]; // Routes where Navbar is hidden
+  const hideNavbarRoutes = ["/", "/login", "/signup"]; 
 
   return (
     <>
@@ -31,6 +32,10 @@ function AppContent() {
         <Route 
           path="/add-plan" 
           element={ <div style={{ display: 'flex' }}><SideNavbar /><PlantingPlan /></div>} 
+        />
+        <Route 
+          path="/calendar" 
+          element={ <div style={{ display: 'flex' }}><SideNavbar /><MyCalendar /></div>} 
         />
         <Route 
           path="/desease" 

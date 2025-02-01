@@ -102,6 +102,10 @@ const Disease = () => {
         <option value="">Select a plant</option>
         <option value="tomato">Tomato</option>
         <option value="potato">Potato</option>
+        <option value="tomato">Pumpkin</option>
+        <option value="potato">Brinjal</option>
+        <option value="tomato">Rice</option>
+        <option value="potato">Okra</option>
       </select>
 
       {selectedPlant && (
@@ -140,7 +144,7 @@ const Disease = () => {
               padding: "10px 20px",
               fontSize: "16px",
               color: "#fff",
-              backgroundColor: "#5c6bc0",
+              backgroundColor: "#685752",
               border: "none",
               borderRadius: "5px",
               cursor: "pointer",

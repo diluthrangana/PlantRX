@@ -2,33 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63c631d1-64cb-49fa-8635-c34f41a6764b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../New Text Document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../New Text Document.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/a.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/banana_box.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/cart.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/product1.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/shopping_cart.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/store.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/store1.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/store_shelves.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled1.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/untitled1.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/vintage-stained-wooden-wall-background-texture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/AddPlantingPlan.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Billing.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ProtectedPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/data/UserContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/home/Desease.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/home/Desease.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/home/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/home/SideNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

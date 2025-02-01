@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHome, FaSeedling, FaVirus, FaSignOutAlt, FaPlus, FaComment, FaCloudRain } from "react-icons/fa";
+import { FaHome, FaSeedling, FaVirus, FaCalendar, FaPlus, FaComment, FaCloudRain } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; 
 
 const SideNavbar = () => {
@@ -19,6 +19,10 @@ const SideNavbar = () => {
           <div style={styles.navItem} onClick={() => navigate("/add-plan")}>
             <FaPlus style={styles.icon} />
             <span style={styles.linkText}>Add Plan</span>
+          </div>
+          <div style={styles.navItem} onClick={() => navigate("/calendar")}>
+            <FaCalendar style={styles.icon} />
+            <span style={styles.linkText}>Calendar</span>
           </div>
           <div style={styles.navItem} onClick={() => navigate("/plants")}>
             <FaSeedling style={styles.icon} />
@@ -76,7 +80,8 @@ const styles = {
     flexDirection: "column",
   },
   navItem: {
-    padding: "15px",
+    padding: "10px",
+    paddingLeft: "20px",
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
